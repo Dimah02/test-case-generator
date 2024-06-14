@@ -43,9 +43,9 @@
     </div>
 
     <div id="container3">
-        <input type="number" placeholder="Number of test cases" class="input input-bordered max-w-xs border-teal-500" />
-        <button class="btn bg-teal-400 text-lg text-black hover:text-white hover:bg-teal-600 ml-4">Generate</button>
-        <button class="btn btn-outline border-teal-400 hover:bg-teal-600 text-lg hover:text-white">Download</button>
+        <input type="number" placeholder="Number of test cases" class="input input-bordered max-w-xs border-teal-500 mb-8" />
+        <button class="btn bg-teal-400 text-lg text-black hover:text-white hover:bg-teal-600 ml-4 mb-8 mr-8 sm:mr-0">Generate</button>
+        <button class="btn btn-outline border-teal-400 hover:bg-teal-600 text-lg hover:text-white mb-8 lg:ml-auto">Download</button>
     </div>
 
 </div>
@@ -80,9 +80,9 @@
     #container3 {
         display: flex;
         padding: 0px 8px;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
         width: 50%;
-    }
-    #container3  button:last-child{
-        margin-left: auto;
     }
 </style>
