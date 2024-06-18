@@ -1,11 +1,11 @@
 <script>
     import { writableArray } from "$lib/store/list-store.js";
     const deleteItem = (index) => {
-        console.log(index);
         $writableArray.splice(index, 1);
         $writableArray = $writableArray;
     };
 </script>
+
 
 <div id="list" class="flex flex-col">
     {#each $writableArray as item, i}
@@ -17,7 +17,7 @@
             </li>
             <li>
                 <button
-                    ><i class="fa-solid fa-pen-to-square text-xl text-black"
+                    ><i class="fa-solid fa-pen-to-square text-xl text-black drawer-button"
                     ></i></button
                 >
             </li>
@@ -42,6 +42,8 @@
         </ul>
     {/each}
 </div>
+
+
 
 <style>
     @media only screen and (max-width: 1199px) {

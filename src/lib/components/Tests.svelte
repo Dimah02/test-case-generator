@@ -1,13 +1,24 @@
 <script>
-    import { writableArray } from "$lib/store/list-store.js";
+    import { writableArray, testsNumber } from "$lib/store/list-store.js";
 </script>
 
 <div id="tests" class="flex flex-col items-center w-3/6 pt-4">
-    {#each $writableArray as item, i}
-        <h1>{item.type}</h1>
-    {/each}
+    {#if $writableArray.length > 1}
+        {#each Array($testsNumber) as _, index (index)}
+            <div
+                class="bg-white w-5/6 text-left text-black text-lg p-2 rounded-[12px] mb-1"
+            >
+                {#each $writableArray as item, i}
+                    {#if i > 0}
+                        {#if item.type == "Integer"}
+                            <h1>{item.value.getTest()}</h1>
+                        {/if}
+                    {/if}
+                {/each}
+            </div>
+        {/each}
+    {/if}
 </div>
-
 
 <style>
     @media only screen and (max-width: 1199px) {
@@ -16,7 +27,7 @@
             margin-top: 1em;
         }
     }
-    div{
+    #tests {
         overflow-y: auto;
         height: 45vh;
         overflow-x: hidden;

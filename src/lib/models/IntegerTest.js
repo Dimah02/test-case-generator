@@ -4,7 +4,7 @@ export class IntegerTest{
         this.l = l;
         this.r = r;
     }
-    getInt() {
+    getTest() {
         return Math.floor(Math.random() * (this.r - this.l + 1) + this.l);
     }
 }
