@@ -19,6 +19,20 @@
         type = item.type;
         type = type;
     };
+    const goDown = (ind) =>{
+        if(ind != $writableArray.length - 1){
+            let temp = $writableArray[ind+1];
+            $writableArray[ind+1] = $writableArray[ind];
+            $writableArray[ind] = temp;
+        }
+    }
+    const goUp = (ind) =>{
+        if(ind != 1){
+            let temp = $writableArray[ind-1];
+            $writableArray[ind-1] = $writableArray[ind];
+            $writableArray[ind] = temp;
+        }
+    }
 </script>
 
 <Heading />
@@ -47,13 +61,13 @@
                         >
                     </li>
                     <li>
-                        <button
+                        <button on:click={()=> goUp(i)}
                             ><i class="fa-solid fa-arrow-up text-xl text-black"
                             ></i></button
                         >
                     </li>
                     <li>
-                        <button
+                        <button on:click={()=> goDown(i)}
                             ><i
                                 class="fa-solid fa-arrow-down text-xl text-black"
                             ></i></button
