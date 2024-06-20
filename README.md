@@ -1,6 +1,7 @@
 # Test Case Generator
 
 ***About:***
+
 For competitive programming problems solvers and problem makers 😼, you will be able to ***generate*** random test cases easily with this Test Case Generator, you can:
 
 - [X] specify the types used in the test cases.
@@ -20,10 +21,13 @@ For competitive programming problems solvers and problem makers 😼, you will b
 
 ***
 
-*** Tools used in the project ***
+***Tools used in the project:***
+
 - JavaScript
 - Tailwind
 - Svelte
 - DaisyUI
 
 _big thanks to Svelte and DaisyUI for making things easier_  
+
+_do not forget to give it a [try](https://dimah02.github.io/test-case-generator/)_
