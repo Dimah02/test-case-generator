@@ -2,11 +2,11 @@
     import { writableArray, testsNumber } from "$lib/store/list-store.js";
 </script>
 
-<div id="tests" class="flex flex-col items-center w-3/6 pt-4">
+<div id="tests" class="flex flex-col items-center w-3/6 pt-2">
     {#if $writableArray.length > 1}
         {#each Array($testsNumber) as _, index (index)}
             <div
-                class="bg-white w-5/6 text-left text-black text-lg p-2 rounded-[12px] mb-1"
+                class="bg-white max-h-36 min-h-24 w-5/6 text-left text-black text-lg p-2 rounded-[12px] mb-1"
             >
                 {#each $writableArray as item, i}
                     {#if i > 0}
@@ -27,6 +27,7 @@
     }
     #tests {
         height: 45vh;
+        overflow-y: auto;
     }
     div{
         overflow-y: auto;
