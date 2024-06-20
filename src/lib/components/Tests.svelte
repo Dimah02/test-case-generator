@@ -26,8 +26,10 @@
         }
     }
     #tests {
-        overflow-y: auto;
         height: 45vh;
-        overflow-x: hidden;
+    }
+    div{
+        overflow-y: auto;
+        overflow-x: auto;
     }
 </style>

@@ -19,20 +19,20 @@
         type = item.type;
         type = type;
     };
-    const goDown = (ind) =>{
-        if(ind != $writableArray.length - 1){
-            let temp = $writableArray[ind+1];
-            $writableArray[ind+1] = $writableArray[ind];
+    const goDown = (ind) => {
+        if (ind != $writableArray.length - 1) {
+            let temp = $writableArray[ind + 1];
+            $writableArray[ind + 1] = $writableArray[ind];
             $writableArray[ind] = temp;
         }
-    }
-    const goUp = (ind) =>{
-        if(ind != 1){
-            let temp = $writableArray[ind-1];
-            $writableArray[ind-1] = $writableArray[ind];
+    };
+    const goUp = (ind) => {
+        if (ind != 1) {
+            let temp = $writableArray[ind - 1];
+            $writableArray[ind - 1] = $writableArray[ind];
             $writableArray[ind] = temp;
         }
-    }
+    };
 </script>
 
 <Heading />
@@ -61,13 +61,13 @@
                         >
                     </li>
                     <li>
-                        <button on:click={()=> goUp(i)}
+                        <button on:click={() => goUp(i)}
                             ><i class="fa-solid fa-arrow-up text-xl text-black"
                             ></i></button
                         >
                     </li>
                     <li>
-                        <button on:click={()=> goDown(i)}
+                        <button on:click={() => goDown(i)}
                             ><i
                                 class="fa-solid fa-arrow-down text-xl text-black"
                             ></i></button
@@ -91,6 +91,8 @@
     <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"
     ></label>
     <div class="p-4 w-80 min-h-full bg-base-200 text-base-content text-left">
+        <!-- Integer Drawer -->
+        <!-- -------------- -->
         {#if type === "Integer"}
             <p>Min value</p>
             <input
@@ -104,6 +106,8 @@
                 class="input input-bordered input-primary w-full max-w-xs"
                 bind:value={$writableArray[i].value.r}
             />
+        <!-- String Drawer -->
+        <!-- -------------- -->
         {:else if type === "String"}
             <p class="my-2">Min length</p>
             <input
