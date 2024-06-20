@@ -2,7 +2,7 @@
     import { testsNumber } from "$lib/store/list-store.js";
 </script>
 
-<div class="flex flex-wrap justify-center items-center w-3/6 ">
+<div class="flex flex-wrap justify-center items-center w-3/6 mt-4">
     <h1 class="font-semibold text-lg">
         Number of tests: 
     </h1>
