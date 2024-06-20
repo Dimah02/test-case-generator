@@ -10,9 +10,7 @@
             >
                 {#each $writableArray as item, i}
                     {#if i > 0}
-                        {#if item.type == "Integer"}
-                            <h1>{item.value.getTest()}</h1>
-                        {/if}
+                        <h1>{item.value.getTest()}</h1>
                     {/if}
                 {/each}
             </div>

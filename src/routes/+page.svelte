@@ -90,8 +90,65 @@
                 class="input input-bordered input-primary w-full max-w-xs"
                 bind:value={$writableArray[i].value.r}
             />
-        {:else if i === 2}
-            <p>hello</p>
+        {:else if type === "String"}
+            <p class="my-2">Min length</p>
+            <input
+                type="number"
+                class="input input-bordered input-primary w-full max-w-xs"
+                bind:value={$writableArray[i].value.l}
+            />
+            <p class="my-2">Max length</p>
+            <input
+                type="number"
+                class="input input-bordered input-primary w-full max-w-xs"
+                bind:value={$writableArray[i].value.r}
+            />
+            <p class="my-2">Spetial Characters</p>
+            <input
+                type="text"
+                class="input input-bordered input-primary w-full max-w-xs"
+                bind:value={$writableArray[i].value.spetialCharacters}
+            />
+            <div class="form-control mt-2">
+                <label class="label cursor-pointer">
+                    <span class="label-text">All Upper-Case letters</span>
+                    <input
+                        type="checkbox"
+                        class="checkbox checkbox-primary"
+                        bind:checked={$writableArray[i].value.allUpper}
+                    />
+                </label>
+            </div>
+            <div class="form-control mt-2">
+                <label class="label cursor-pointer">
+                    <span class="label-text">All Lower-Case letters</span>
+                    <input
+                        type="checkbox"
+                        class="checkbox checkbox-primary"
+                        bind:checked={$writableArray[i].value.allLower}
+                    />
+                </label>
+            </div>
+            <div class="form-control mt-2">
+                <label class="label cursor-pointer">
+                    <span class="label-text">All Numbers</span>
+                    <input
+                        type="checkbox"
+                        class="checkbox checkbox-primary"
+                        bind:checked={$writableArray[i].value.numbers}
+                    />
+                </label>
+            </div>
+            <div class="form-control mt-2">
+                <label class="label cursor-pointer">
+                    <span class="label-text">Leading Zeros</span>
+                    <input
+                        type="checkbox"
+                        class="checkbox checkbox-primary"
+                        bind:checked={$writableArray[i].value.leadingZero}
+                    />
+                </label>
+            </div>
         {:else}
             <p>hi</p>
         {/if}
